@@ -7,17 +7,20 @@
 #include "generated_plugin_registrant.h"
 
 #include <device_volume/device_volume_plugin_c_api.h>
-#include <flutter_video_thumbnail_plus/flutter_video_thumbnail_plus_plugin_c_api.h>
 #include <media_kit_libs_windows_video/media_kit_libs_windows_video_plugin_c_api.h>
 #include <media_kit_video/media_kit_video_plugin_c_api.h>
+#include <screen_retriever_windows/screen_retriever_windows_plugin_c_api.h>
+#include <window_manager/window_manager_plugin.h>
 
 void RegisterPlugins(flutter::PluginRegistry* registry) {
   DeviceVolumePluginCApiRegisterWithRegistrar(
       registry->GetRegistrarForPlugin("DeviceVolumePluginCApi"));
-  FlutterVideoThumbnailPlusPluginCApiRegisterWithRegistrar(
-      registry->GetRegistrarForPlugin("FlutterVideoThumbnailPlusPluginCApi"));
   MediaKitLibsWindowsVideoPluginCApiRegisterWithRegistrar(
       registry->GetRegistrarForPlugin("MediaKitLibsWindowsVideoPluginCApi"));
   MediaKitVideoPluginCApiRegisterWithRegistrar(
       registry->GetRegistrarForPlugin("MediaKitVideoPluginCApi"));
+  ScreenRetrieverWindowsPluginCApiRegisterWithRegistrar(
+      registry->GetRegistrarForPlugin("ScreenRetrieverWindowsPluginCApi"));
+  WindowManagerPluginRegisterWithRegistrar(
+      registry->GetRegistrarForPlugin("WindowManagerPlugin"));
 }

@@ -1,4 +1,5 @@
 #include "flutter_window.h"
+#include "system_mute.h"
 
 #include <optional>
 
@@ -25,6 +26,8 @@ bool FlutterWindow::OnCreate() {
     return false;
   }
   RegisterPlugins(flutter_controller_->engine());
+  RegisterSystemMuteChannel(
+    flutter_controller_->engine()->messenger());
   SetChildContent(flutter_controller_->view()->GetNativeWindow());
 
   flutter_controller_->engine()->SetNextFrameCallback([&]() {

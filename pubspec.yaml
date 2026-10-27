@@ -38,8 +38,8 @@ dependencies:
   media_kit_video: ^2.0.1
   media_kit_libs_video: ^1.0.7
   file_picker: ^13.1.0
-  flutter_video_thumbnail_plus: ^1.0.7
   device_volume: ^2.0.0
+  window_manager: ^0.5.2
 
 dev_dependencies:
   flutter_test:
